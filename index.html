@@ -3,27 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Age Calculator</title>
- 
+  <title>Multi Calculator</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Landing Section -->
-  <section class="landing d-flex flex-column justify-content-center align-items-center
-   text-center text-white" id="home">
+  <section class="landing d-flex flex-column justify-content-center align-items-center text-center text-white" id="home">
     <h1 class="display-4 fw-bold">Calculate Your Age</h1>
     <p class="lead">Find out your exact years, months, and days in seconds.</p>
     <button class="btn btn-light rounded-circle mt-4" id="scrollBtn">
-        ↓
+      ↓
     </button>
   </section>
 
-  <!-- Calculator Section -->
-  <section class="calc-section d-flex justify-content-center align-items-center"
-   id="calculator">
-    <div class="card shadow-lg p-4 rounded-4 w-100" style="max-width: 500px;">
+  <!-- Age Calculator Section -->
+  <section class="calc-section d-flex flex-column justify-content-center align-items-center" id="calculator">
+    <div class="card shadow-lg p-4 rounded-4 w-100 mb-3" style="max-width: 500px;">
       <h2 class="text-center mb-4">Age Calculator</h2>
       
       <div class="mb-3">
@@ -37,9 +35,54 @@
 
       <div class="result mt-4" id="result"></div>
     </div>
+
+   
+    <button class="btn btn-outline-dark rounded-circle mt-3" id="toHoursBtn">
+      ↓
+    </button>
   </section>
 
-  <!-- Bootstrap JS -->
+  <!-- Hours to Seconds Converter Section -->
+  <section class="calc-section d-flex justify-content-center align-items-center" id="hoursConverter">
+    <div class="card shadow-lg p-4 rounded-4 w-100" style="max-width: 500px;">
+      <h2 class="text-center mb-4">Hours to Seconds Converter</h2>
+      
+      <div class="mb-3">
+        <label for="hours" class="form-label">Enter Hours</label>
+        <input type="number" id="hours" class="form-control" placeholder="Enter hours">
+      </div>
+
+      <div class="d-grid">
+        <button class="btn btn-success btn-lg" onclick="convertHoursToSeconds()">Convert</button>
+      </div>
+
+      <div class="result mt-4" id="hoursResult"></div>
+     </div>
+     <button class="btn btn-outline-dark rounded-circle mt-3" id="toSecondsBtn">
+      ↓
+    </button>
+  </section>
+
+  <!-- Next Number Finder Section -->
+<section id="next-number" class="calc-section d-flex justify-content-center align-items-center">
+  <div class="card shadow-lg p-4 rounded-4 w-100" style="max-width: 500px;">
+  <h2 class="text-2xl font-bold mb-4">Find Next Number</h2>
+  <p>Enter a number (integer or float) or pick from array:</p>
+
+  <input type="text" id="userNumber" placeholder="Enter a number" class="border rounded p-2 mb-2 w-full">
+
+  <button onclick="handleNextNumber()" class="bg-blue-500 text-white px-4 py-2 rounded">
+    Find Next Number
+  </button>
+
+  <p id="nextResult" class="mt-4 text-lg font-semibold"></p>
+  </div>
+    <button class="btn btn-outline-dark rounded-circle mt-3" id="toFindNextBtn">
+      ↓
+    </button>
+</section>
+
+ 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
