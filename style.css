@@ -27,7 +27,7 @@ body, html {
 
 
 .calc-section {
-  height: 100vh;
+  min-height: 100vh;
   background: #f8f9fa;
 }
 
@@ -75,8 +75,6 @@ transition: all 0.3s ease;
 #toBMICalculatorBtn {
   background: white;
   color: #219744;
-  font-size: 20px;
-  margin-top: 20px;
   transition: all 0.3s ease;
 }
 
@@ -97,4 +95,40 @@ transition: all 0.3s ease;
   color: #fff;
   border-color: #007bff;
   transform: translateY(3px);
+}
+
+#backToHomeBtn {
+  background: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#backToHomeBtn:hover {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+}
+
+#showHintBtn {
+  background: linear-gradient(45deg, #ffc107, #ffeb3b);
+  border: none;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#showHintBtn:hover {
+  background: linear-gradient(45deg, #ffb300, #ffc107);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  color: #333;
+}
+
+#hintButtonContainer {
+  animation: fadeIn 0.5s ease-in;
 }
