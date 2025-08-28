@@ -2,7 +2,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  /* overflow: hidden; */
+   overflow: hidden; 
 }
 
 /* Landing section */
@@ -17,7 +17,9 @@ body, html {
   text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
 }
 
-#scrollBtn, #toHoursBtn, #toSecondsBtn , #toFindNextBtn {
+#scrollBtn, #toHoursBtn, #toSecondsBtn, #toFindNextBtn, #toNameCapitalizerBtn,
+#toBMICalculatorBtn, #toArrayGeneratorBtn 
+{
   font-size: 1.5rem;
   width: 50px;
   height: 50px;
@@ -36,23 +38,10 @@ body, html {
   font-size: 1rem;
 }
 
-#next-number {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  text-align: center;
-}
-
 #next-number button {
   background-color: #007bff;
   color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+ transition: background 0.3s ease;
 }
 
 #next-number button:hover {
@@ -60,18 +49,50 @@ body, html {
 }
 
 #toFindNextBtn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid #333;
+background: white;
+color: #333;
+transition: all 0.3s ease;
+}
+
+#toFindNextBtn:hover {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  transform: translateY(3px);
+}
+
+
+#name-capitalizer button {
+  background-color: #973747; 
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+#name-capitalizer button:hover {
+  background-color: #ff69b4 !important;
+}
+
+#toBMICalculatorBtn {
   background: white;
-  color: #333;
+  color: #219744;
   font-size: 20px;
   margin-top: 20px;
   transition: all 0.3s ease;
 }
 
-#toFindNextBtn:hover {
+#toBMICalculatorBtn:hover {
+  background-color: #007bff;
+ 
+}
+
+#toArrayGeneratorBtn {
+
+  background: white;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+#toArrayGeneratorBtn:hover {
   background: #007bff;
   color: #fff;
   border-color: #007bff;
