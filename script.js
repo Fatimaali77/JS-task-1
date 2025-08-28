@@ -182,11 +182,11 @@ function capitalizeName() {
         return;
     }
     
-    // Split the name into words (first name, last name, etc.)
+   
     let nameWords = name.split(" ");
     let capitalizedWords = [];
     
-    // Capitalize the first letter of each word
+   
     for (let i = 0; i < nameWords.length; i++) {
         if (nameWords[i].length > 0) {
             let capitalizedWord = nameWords[i].charAt(0).toUpperCase() + nameWords[i].slice(1);
@@ -211,9 +211,9 @@ function calculateBMI() {
     
     let feet, inches;
     
-    // Check if input contains a decimal point (feet.inches format)
+
     if (heightInput.includes(".")) {
-        // Parse height in feet.inches format (e.g., 5.08 = 5 feet 8 inches)
+      
         let heightParts = heightInput.split(".");
         if (heightParts.length !== 2) {
             document.getElementById("bmiResult").innerText = "Please enter height in feet or feet.inches format (e.g., 5 or 5.08)";
@@ -228,7 +228,7 @@ function calculateBMI() {
             return;
         }
     } else {
-        // Parse height in feet only format (e.g., 5 = 5 feet 0 inches)
+    
         feet = parseInt(heightInput);
         inches = 0;
         
@@ -238,7 +238,7 @@ function calculateBMI() {
         }
     }
     
-    // Convert feet and inches to total inches, then to meters
+ 
     let totalInches = (feet * 12) + inches;
     let heightInMeters = totalInches * 0.0254;
     
@@ -257,7 +257,7 @@ function calculateBMI() {
         category = "Obese";
     }
     
-    // Display height appropriately based on input format
+   
     let heightDisplay = inches > 0 ? `${feet}' ${inches}"` : `${feet}' 0"`;
     document.getElementById("bmiResult").innerText = `Your BMI is ${bmi} (${category}) - Height: ${heightDisplay}`;
 }
@@ -308,11 +308,11 @@ function calculateAddition() {
     const num1 = parseInt(firstNum);
     const num2 = parseInt(secondNum);
     
-    // If first number is entered but second is empty, show NaN
+
     if (firstNum !== "" && secondNum === "") {
         resultField.value = "NaN";
     }
-    // If both numbers are entered, calculate and show result
+
     else if (firstNum !== "" && secondNum !== "") {
         if (!isNaN(num1) && !isNaN(num2)) {
             resultField.value = num1 + num2;
@@ -320,22 +320,19 @@ function calculateAddition() {
             resultField.value = "Invalid input";
         }
     }
-    // If both fields are empty, clear result
+
     else {
         resultField.value = "";
     }
 }
 
-// Add event listeners for real-time calculation
 document.addEventListener("DOMContentLoaded", function() {
     const firstNumberInput = document.getElementById("firstNumber");
     const secondNumberInput = document.getElementById("secondNumber");
     
-    // Add event listeners for input events (real-time)
     firstNumberInput.addEventListener("input", calculateAddition);
     secondNumberInput.addEventListener("input", calculateAddition);
     
-    // Also add keyup events for better responsiveness
     firstNumberInput.addEventListener("keyup", calculateAddition);
     secondNumberInput.addEventListener("keyup", calculateAddition);
 });
